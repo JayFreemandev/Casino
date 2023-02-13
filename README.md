@@ -1,5 +1,4 @@
-# 객체 설계
-![Untitled](https://user-images.githubusercontent.com/72185011/218302167-a3664fef-7f1f-4698-842d-7786a3b50c9d.png)  
+# 객체 설계 
 카지노의 손님들은 가방을 가져와야되고 가방에는 아래만 소지가 가능합니다.
 
 - 티켓
