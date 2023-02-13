@@ -74,7 +74,7 @@ public class Casino {
     공동체를 구축하는것**이기 때문이다. 
 </details>
 
-해결 과정
+[해결 과정](https://github.com/JayFreemandev/Casino/tree/main/Casino)  
 
 
 #### reference
