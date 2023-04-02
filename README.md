@@ -1,3 +1,8 @@
+예제 프로젝트에 기반한 통합적인 소프트웨어 개발을 연습하는 Repo입니다.
+
+<details>
+<summary> Casino는 클린코드 관점 </summary>
+
 # 객체 설계 
 카지노의 손님들은 가방을 가져와야되고 가방에는 아래만 소지가 가능합니다.
 
@@ -75,6 +80,7 @@ public class Casino {
 </details>
 
 [해결 과정](https://github.com/JayFreemandev/Casino/tree/main/Casino)  
+</details>
 
 
 #### reference
