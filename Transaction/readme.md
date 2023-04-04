@@ -39,3 +39,7 @@ public class BankTransactionHistorySimple {
 2. DRY 위반  
 코드를 간결히 유지하는것도 중요하지만 위와 같이 변화에 유연하지못하고  
 경우의 수마다 반복될 상황이 생긴다면 DRY를 위반한것이고 KISS를 남용한것이다.
+
+
+**접근**
+One에서는 KISS, DRY, SRP가 녹아있다.
