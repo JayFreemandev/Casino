@@ -81,7 +81,7 @@ public static void main(final String[] args) throws Exception {
         total += amount;
     }
 
-    System.out.println("철수의 총 지출은 " + total + "원 입니다.");
+    System.out.println("정팔이의 총 지출은 " + total + "원 입니다.");
 }
 ```
 
@@ -97,8 +97,8 @@ public static void main(final String[] args) throws Exception {
     final List<String> lines = Files.readAllLines(path);
     final List<BankTransaction> bankTransactions = bankStatementParser.parseLinesFrom(lines);
 
-    System.out.println("총지출 " + calculateTotalAmount(bankTransactions));
-    System.out.println("1월의 지출 " + selectInMonth(bankTransactions, Month.JANUARY));
+    System.out.println("정팔이의 총지출 " + calculateTotalAmount(bankTransactions));
+    System.out.println("정팔이의 1월의 지출 " + selectInMonth(bankTransactions, Month.JANUARY));
 }
 
 private static double calculateTotalAmount(final List<BankTransaction> bankTransactions) {
