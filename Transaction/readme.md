@@ -26,7 +26,7 @@ public class BankTransactionHistorySimple {
             total += amount;
         }
 
-        System.out.println("철수의 총 지출은 " + total + "원 입니다.");
+        System.out.println("정팔이의 총 지출은 " + total + "원 입니다.");
     }
 }
 ```
