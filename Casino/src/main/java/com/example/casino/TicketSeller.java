@@ -1,4 +1,4 @@
-package main.java.com.example.casino;
+package src.main.java.com.example.casino;
 
 public class TicketSeller {
     private TicketOffice ticketOffice;

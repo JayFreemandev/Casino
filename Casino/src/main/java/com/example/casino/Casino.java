@@ -1,5 +1,7 @@
 package main.java.com.example.casino;
 
+import src.main.java.com.example.casino.TicketSeller;
+
 public class Casino {
     private TicketSeller ticketSeller;
 

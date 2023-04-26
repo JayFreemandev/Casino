@@ -1,4 +1,6 @@
-package main.java.com.example.casino;
+package src.main.java.com.example.casino;
+
+import main.java.com.example.casino.Ticket;
 
 import java.util.ArrayList;
 import java.util.Arrays;
