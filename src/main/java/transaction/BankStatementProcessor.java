@@ -1,4 +1,4 @@
-package src.main.transaction;
+package transaction;
 
 import java.time.Month;
 import java.util.List;
