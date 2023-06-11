@@ -27,10 +27,9 @@ NPE를 해결하기 위해 Optional을 활용하여 신뢰성있는 코드를 �
 <hr>
 
 **기술적고민**  
-<details>
-<summary> Casino는 클린코드 관점 </summary>
 
-# 객체 설계 
+### Casino의 클린코드 관점 
+
 카지노의 손님들은 가방을 가져와야되고 가방에는 아래만 소지가 가능합니다.
 
 - 티켓
@@ -107,11 +106,11 @@ public class Casino {
 </details>
 
 [해결 과정](https://github.com/JayFreemandev/Casino/blob/main/Docs/%EC%B9%B4%EC%A7%80%EB%85%B8%EC%9D%98%20%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C%20%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81.md)  
-</details>
 <hr>
-**위시리스트**  
-1. 객체지향 생활체조 원칙중 일급 컬렉션 사용과 getter/setter가 없다고 생각하고 리팩토링 진행
-2. 자바 버전을 17까지 높여보며 변경된 Switch 표준식으로 리팩토링 진행
+
+**위시리스트**   
+1. 객체지향 생활체조 원칙중 일급 컬렉션 사용과 getter/setter가 없다고 생각하고 리팩토링 진행  
+2. 자바 버전을 17까지 높여보며 변경된 Switch 표준식으로 리팩토링 진행  
 3. 자바 -> 코틀린 전환
 
 <hr>
