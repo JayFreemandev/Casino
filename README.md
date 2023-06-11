@@ -1,5 +1,20 @@
-예제 프로젝트에 기반한 통합적인 소프트웨어 개발을 연습하는 Repo입니다.
+### 프로젝트 소개
+재미있게 보았던 "카지노" 드라마를 객체지향적으로 바라보며 설계하고 구현한 프로젝트입니다.  
+<hr>
 
+**Casino(카지노)**  
+카지노, 매표소, 매표소 직원, 손님 객체로 이루어져있습니다.  
+객체들의 명확한 역할을 나누고 가독성과 결합도를 낮추며 클린코드에 집중했습니다.  
+</br>
+
+**Transaction(입출금)**  
+소프트웨어 개발원칙중 KISS, DRY, SRP를 코드에 적용했고 Java8의 Lambda를 활용하여 가독성을 높혔습니다.  
+유닛 테스트를 진행할때는 직관적으로 읽기 쉽게 Given-When-Then 패턴을 적용했습니다.  
+Getter, Setter와 같은 테스트가 필요없는 메소드를 제외하고는 연습을 위해 테스트 커버리지 목표를 70~90%로 하였습니다.
+</br>  
+<hr>
+
+**기술적고민**  
 <details>
 <summary> Casino는 클린코드 관점 </summary>
 
@@ -82,10 +97,9 @@ public class Casino {
 [해결 과정](https://github.com/JayFreemandev/Casino/tree/main/Casino)  
 </details>
 
-
-#### reference
+<hr>
 <details>
-<summary> </summary>
+<summary> reference </summary>
 - 오브젝트: 코드로 이해하는 객체지향 설계  
 - 객체지향의 사실과 오해
 </details>
