@@ -1,4 +1,9 @@
 # Casino
+<div align="center">
+  <img src="https://github.com/JayFreemandev/Casino/assets/72185011/d15176c3-5cbf-4763-a88f-deaa9096a859" width="50%"> <br>
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJayFreemandev%2FCasino&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" width="9%">
+</div>
+<hr>
 
 ### 프로젝트 소개
 재미있게 보았던 "카지노" 드라마를 객체지향적으로 바라보며 설계하고 구현한 프로젝트입니다.  
