@@ -68,15 +68,15 @@ public class Casino {
         this.ticketSeller = ticketSeller;
     }
     
-    public void enter(Player player){
-        if(player.getBag().hasInvitation()){
+    public void enter(Player customer){
+        if(customer.getBag().hasInvitation()){
             Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            player.getBag().setTicket(ticket);
+            customer.getBag().setTicket(ticket);
         }else{
             Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            player.getBag().minusAmount(ticket.getFee());
+            customer.getBag().minusAmount(ticket.getFee());
             ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
-            player.getBag().setTicket(ticket);
+            customer.getBag().setTicket(ticket);
         }
     }
 }

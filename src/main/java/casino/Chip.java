@@ -1,6 +1,6 @@
-package main.java.com.example.casino;
+package casino;
 
-public class Ticket {
+public class Chip {
     private Long fee;
 
     public Long getFee() {

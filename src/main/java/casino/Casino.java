@@ -1,23 +1,18 @@
-package main.java.com.example.casino;
-
-import src.main.java.com.example.casino.TicketSeller;
+package casino;
 
 public class Casino {
-    private TicketSeller ticketSeller;
+    private Dealer dealer;
 
-    public Casino(TicketSeller ticketSeller) {
-        this.ticketSeller = ticketSeller;
+    public Casino(Dealer dealer) {
+        this.dealer = dealer;
     }
 
-    public void enter(Player player){
-        if(player.getBag().hasInvitation()){
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            player.getBag().setTicket(ticket);
-        }else{
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            player.getBag().minusAmount(ticket.getFee());
-            ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
-            player.getBag().setTicket(ticket);
+    public void play(Customer customer){
+        if(!customer.getCustomerBelonging().hasChip()){
+            Chip chip = dealer.getCasinoDesk().getChip();
+            customer.getCustomerBelonging().minusAmount(chip.getFee());
+            dealer.getCasinoDesk().plusAmount(chip.getFee());
+            customer.getCustomerBelonging().setChip(chip);
         }
     }
 }
