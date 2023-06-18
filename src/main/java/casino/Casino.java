@@ -1,7 +1,7 @@
 package casino;
 
 public class Casino {
-    private Dealer dealer;
+    private final Dealer dealer;
 
     public Casino(Dealer dealer) {
         this.dealer = dealer;

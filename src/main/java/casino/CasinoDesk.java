@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CasinoDesk {
     private Long amount;
-    private List<Chip> chips = new ArrayList<>();
+    private final List<Chip> chips = new ArrayList<>();
 
     public CasinoDesk(Long amount, Chip... chips) {
         this.amount = amount;
