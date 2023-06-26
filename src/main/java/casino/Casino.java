@@ -1,18 +1,29 @@
 package casino;
 
-public class Casino {
-    private final Dealer dealer;
+import casino.chip.Chip;
 
-    public Casino(Dealer dealer) {
-        this.dealer = dealer;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Casino {
+    private Long amount;
+    private final List<Chip> chips = new ArrayList<>();
+
+    public Casino(Long amount, Chip... chips) {
+        this.amount = amount;
+        this.chips.addAll(Arrays.asList(chips));
     }
 
-    public void play(Customer customer){
-        if(!customer.getCustomerBelonging().hasChip()){
-            Chip chip = dealer.getCasinoDesk().getChip();
-            customer.getCustomerBelonging().minusAmount(chip.getFee());
-            dealer.getCasinoDesk().plusAmount(chip.getFee());
-            customer.getCustomerBelonging().setChip(chip);
-        }
+    public Chip getChip(){
+        return chips.remove(0);
+    }
+
+    public void minusAmount(Long amount){
+        this.amount -= amount;
+    }
+
+    public void plusAmount(Long amount){
+        this.amount += amount;
     }
 }

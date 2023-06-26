@@ -1,5 +1,7 @@
 package casino;
 
+import casino.chip.Chip;
+
 public class CustomerBelonging {
     private Long amount;
     private Chip chip;
@@ -11,6 +13,10 @@ public class CustomerBelonging {
     public CustomerBelonging(Chip chip, long amount) {
         this.amount = amount;
         this.chip = chip;
+    }
+
+    public boolean hasMoney(){
+        return amount != null;
     }
 
     public boolean hasChip(){

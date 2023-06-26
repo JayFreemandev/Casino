@@ -1,13 +1,30 @@
 package casino;
 
-public class Dealer {
-    private final CasinoDesk casinoDesk;
+import casino.chip.Chip;
 
-    public Dealer(CasinoDesk casinoDesk) {
-        this.casinoDesk = casinoDesk;
+public class Dealer {
+    private final Casino casino;
+
+    private final Chip chip;
+
+    public Dealer(
+            Casino casino,
+            Chip chip) {
+        this.casino = casino;
+        this.chip = chip;
     }
 
-    public CasinoDesk getCasinoDesk(){
-        return casinoDesk;
+    public Casino getCasino(){
+        return casino;
+    }
+
+    public Chip changeChip(Customer customer){
+        Long chipPrice = customer.buyChipFactoryVersion(chip);
+        if(chipPrice > chip.getFee()){
+            return new Chip();
+        }
+
+        casino.plusAmount(chipPrice);
+        return casino.getChip();
     }
 }

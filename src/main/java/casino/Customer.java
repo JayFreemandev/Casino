@@ -1,7 +1,11 @@
 package casino;
 
+import casino.chip.Chip;
+import casino.chip.ChipCalculator;
+import casino.chip.ChipCalculatorFactory;
+
 public class Customer {
-    private CustomerBelonging customerBelonging;
+    private final CustomerBelonging customerBelonging;
 
     public Customer(CustomerBelonging customerBelonging) {
         this.customerBelonging = customerBelonging;
@@ -9,5 +13,15 @@ public class Customer {
 
     public CustomerBelonging getCustomerBelonging(){
         return customerBelonging;
+    }
+
+    public Long buyChipFactoryVersion(Chip chip){
+        if(customerBelonging.hasMoney()){
+            ChipCalculator chipCalculator = ChipCalculatorFactory.createChipCalculator(chip.getChipColor());
+            long chipFee = chipCalculator.calculateChipFee(chip);
+            return chipFee;
+        }else{
+            return 0L;
+        }
     }
 }

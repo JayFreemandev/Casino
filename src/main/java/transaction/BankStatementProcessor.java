@@ -4,7 +4,6 @@ import java.time.Month;
 import java.util.List;
 
 public class BankStatementProcessor {
-
     private final List<BankTransaction> bankTransactions;
 
     public BankStatementProcessor(List<BankTransaction> bankTransactions) {
