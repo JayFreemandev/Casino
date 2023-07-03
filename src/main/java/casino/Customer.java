@@ -11,15 +11,15 @@ public class Customer {
         this.customerBelonging = customerBelonging;
     }
 
-    public CustomerBelonging getCustomerBelonging(){
+    public CustomerBelonging getCustomerBelonging() {
         return customerBelonging;
     }
 
-    public Long buyChipFactoryVersion(Chip chip){
-        if(customerBelonging.hasMoney()){
+    public Long buyChipFactoryVersion(Chip chip) {
+        if (customerBelonging.hasMoney()) {
             ChipCalculator chipCalculator = ChipCalculatorFactory.createChipCalculator(chip.getChipColor());
             return chipCalculator.calculateChipFee(chip);
-        }else{
+        } else {
             return 0L;
         }
     }

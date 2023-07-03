@@ -15,23 +15,23 @@ public class CustomerBelonging {
         this.chip = chip;
     }
 
-    public boolean hasMoney(){
+    public boolean hasMoney() {
         return amount != null;
     }
 
-    public boolean hasChip(){
+    public boolean hasChip() {
         return chip != null;
     }
 
-    public void setChip(Chip chip){
+    public void setChip(Chip chip) {
         this.chip = chip;
     }
 
-    public void minusAmount(Long amount){
+    public void minusAmount(Long amount) {
         this.amount -= amount;
     }
 
-    public void plusAmount(Long amount){
+    public void plusAmount(Long amount) {
         this.amount += amount;
     }
 }

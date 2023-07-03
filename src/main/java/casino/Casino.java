@@ -15,15 +15,15 @@ public class Casino {
         this.chips.addAll(Arrays.asList(chips));
     }
 
-    public Chip getChip(){
+    public Chip getChip() {
         return chips.remove(0);
     }
 
-    public void minusAmount(Long amount){
+    public void minusAmount(Long amount) {
         this.amount -= amount;
     }
 
-    public void plusAmount(Long amount){
+    public void plusAmount(Long amount) {
         this.amount += amount;
     }
 }

@@ -7,20 +7,18 @@ public class Dealer {
 
     private final Chip chip;
 
-    public Dealer(
-            Casino casino,
-            Chip chip) {
+    public Dealer(Casino casino, Chip chip) {
         this.casino = casino;
         this.chip = chip;
     }
 
-    public Casino getCasino(){
+    public Casino getCasino() {
         return casino;
     }
 
-    public Chip changeChip(Customer customer){
+    public Chip changeChip(Customer customer) {
         Long chipPrice = customer.buyChipFactoryVersion(chip);
-        if(chipPrice > chip.getFee()){
+        if (chipPrice > chip.getFee()) {
             return new Chip();
         }
 

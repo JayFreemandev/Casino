@@ -11,6 +11,7 @@ public class ChipCalculatorMapFactory {
         calculatorMap.put(ChipColor.BLACK, new BlackChipCalculator());
         calculatorMap.put(ChipColor.GOLD, new GoldChipCalculator());
     }
+
     public static ChipCalculator createChipCalculator(ChipColor chipColor) {
         ChipCalculator calculator = calculatorMap.get(chipColor);
         if (calculator == null) {
