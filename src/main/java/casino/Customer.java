@@ -18,8 +18,7 @@ public class Customer {
     public Long buyChipFactoryVersion(Chip chip){
         if(customerBelonging.hasMoney()){
             ChipCalculator chipCalculator = ChipCalculatorFactory.createChipCalculator(chip.getChipColor());
-            long chipFee = chipCalculator.calculateChipFee(chip);
-            return chipFee;
+            return chipCalculator.calculateChipFee(chip);
         }else{
             return 0L;
         }
