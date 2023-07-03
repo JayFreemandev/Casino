@@ -3,23 +3,34 @@ package casino.chip;
 import java.util.Arrays;
 
 public enum ChipColor {
-    RED(10L, "RED"),
-    BLACK(30L, "BLACK"),
-    GOLD(50L, "GOLD");
-    private final Long fee;
-    private final String color;
+    RED {
+        @Override
+        public long calculateChipFee(Chip chip) {
+            long fee = chip.getFee();
+            return fee * 5;
+        }
+    },
+    BLACK {
+        @Override
+        public long calculateChipFee(Chip chip) {
+            long fee = chip.getFee();
+            return fee * 10;
+        }
+    },
+    GOLD {
+        @Override
+        public long calculateChipFee(Chip chip) {
+            long fee = chip.getFee();
+            return fee * 100;
+        }
+    };
 
-    ChipColor(
-            Long fee,
-            String color) {
-        this.fee = fee;
-        this.color = color;
-    }
+    public abstract long calculateChipFee(Chip chip);
 
     public ChipColor getColor(String color) {
         return Arrays.stream(ChipColor.values())
-            .filter(chipColor -> chipColor.color.equalsIgnoreCase(color))
-            .findFirst()
-            .orElse(null);
+                .filter(chipColor -> chipColor.name().equalsIgnoreCase(color))
+                .findFirst()
+                .orElse(null);
     }
 }
