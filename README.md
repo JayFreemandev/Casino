@@ -35,9 +35,28 @@ NPE를 해결하기 위해 Optional을 활용하여 신뢰성 있는 코드를 �
 <hr>
 
 ### 기술적고민  
-*Casino의 클린코드 관점* 
-wiki 작성중
-
+- 변경에 취약하고 객체의 책임을 분리해야하는 상황
+- 반복되는 if문을 처리하는 다양한 방법
+- 객체 지향에서 getter과 setter를 지향하는 이유
+- 보다 효율적이고 보기좋은 패키지 구조에 대한 고민
+- 정적 팩토리 메소드가 필요한 순간과 사용시 기본 생성자 private 이유
+- 좋은 테스트 코드는 무엇일까([좋은 테스트를 갖췄는지의 여부를 어떻게 알 수 있는가?](https://currenjin.github.io/wiki/TDD/#%EC%A2%8B%EC%9D%80-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EA%B0%96%EC%B7%84%EB%8A%94%EC%A7%80%EC%9D%98-%EC%97%AC%EB%B6%80%EB%A5%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%95%8C-%EC%88%98-%EC%9E%88%EB%8A%94%EA%B0%80)
+[긴 셋업 코드](https://currenjin.github.io/wiki/TDD/#%EA%B8%B4-%EC%85%8B%EC%97%85-%EC%BD%94%EB%93%9C)
+[셋업 중복](https://currenjin.github.io/wiki/TDD/#%EC%85%8B%EC%97%85-%EC%A4%91%EB%B3%B5)
+[실행 시간이 오래 걸리는 테스트](https://currenjin.github.io/wiki/TDD/#%EC%8B%A4%ED%96%89-%EC%8B%9C%EA%B0%84%EC%9D%B4-%EC%98%A4%EB%9E%98-%EA%B1%B8%EB%A6%AC%EB%8A%94-%ED%85%8C%EC%8A%A4%ED%8A%B8)
+[지기 쉬운 테스트](https://currenjin.github.io/wiki/TDD/#%EC%A7%80%EA%B8%B0-%EC%89%AC%EC%9A%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8)
+- 적절한 테스트 코드의 커버리지 수치는 어떻게 정할까
+- 같은 클래스내 생성자가 두개 이상인 경우 생성자 체인 기법
+- 생성자에서 모든 필드를 초기화 해야할까?
+- Stream 사용시 findFirst와 findAny를 사용(stateful 순서와 병렬 처리)
+- Stream 처리시 메서드 체이닝의 개수와 가독성
+- equals와 hashCode를 재정의 하는 이유
+- NPE를 방지하기 위한 optional 상황
+- 불변 객체 사용과 일급 컬렉션을 사용하는 이유는 무엇일까
+- static을 사용하여 utlity를 만드는건 나쁘게 봐야할까(아이템4, 인스턴스화 막아라)
+- assertThat 대신 assertAll
+- 자주 사용되는 상수들을 글로벌하게 관리하는것은 어떨까?
+- [UnmodifiableList은 만능이 아니더라(방어적 복사)](https://ecsimsw.tistory.com/795)
 <hr>
 <details>
 <summary> reference </summary>
