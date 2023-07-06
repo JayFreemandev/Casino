@@ -13,30 +13,22 @@ public class BankStatementProcessor {
     }
 
     public double calculateTotalAmount() {
-        double total = 0;
-        for (final BankTransaction bankTransaction : bankTransactions) {
-            total += bankTransaction.getAmount();
-        }
-        return total;
+        return bankTransactions.stream()
+                .mapToDouble(BankTransaction::getAmount)
+                .sum();
     }
 
     public double calculateTotalInMonth(final Month month) {
-        double total = 0;
-        for (final BankTransaction bankTransaction : bankTransactions) {
-            if (bankTransaction.getDate().getMonth() == month) {
-                total += bankTransaction.getAmount();
-            }
-        }
-        return total;
+        return bankTransactions.stream()
+                .filter(transaction -> transaction.getDate().getMonth() == month)
+                .mapToDouble(BankTransaction::getAmount)
+                .sum();
     }
 
     public double calculateTotalForCategory(final String category) {
-        double total = 0;
-        for (final BankTransaction bankTransaction : bankTransactions) {
-            if (bankTransaction.getDescription().equals(category)) {
-                total += bankTransaction.getAmount();
-            }
-        }
-        return total;
+        return bankTransactions.stream()
+                .filter(transaction -> transaction.getDescription().equals(category))
+                .mapToDouble(BankTransaction::getAmount)
+                .sum();
     }
 }
