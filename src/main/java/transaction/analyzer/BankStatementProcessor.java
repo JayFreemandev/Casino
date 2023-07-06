@@ -4,6 +4,7 @@ import transaction.domain.BankTransaction;
 
 import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 
 public class BankStatementProcessor {
     private final List<BankTransaction> bankTransactions;
@@ -30,5 +31,18 @@ public class BankStatementProcessor {
                 .filter(transaction -> transaction.getDescription().equals(category))
                 .mapToDouble(BankTransaction::getAmount)
                 .sum();
+    }
+
+    public Optional<BankTransaction> findFirstTransactionByCategory(String category) {
+        return bankTransactions.stream()
+                .filter(transaction -> transaction.getDescription().equals(category))
+                .findFirst();
+    }
+
+    // 병렬
+    public Optional<BankTransaction> findAnyTransactionAboveAmount(double amount) {
+        return bankTransactions.parallelStream()
+                .filter(transaction -> transaction.getAmount() > amount)
+                .findAny();
     }
 }
