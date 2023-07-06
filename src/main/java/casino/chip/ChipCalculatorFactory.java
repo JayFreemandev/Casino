@@ -1,6 +1,9 @@
 package casino.chip;
 
 public class ChipCalculatorFactory {
+    private ChipCalculatorFactory() {
+    }
+
     public static ChipCalculator createChipCalculator(ChipColor chipColor) {
         if (chipColor == ChipColor.RED) {
             return new RedChipCalculator();

@@ -1,6 +1,7 @@
-package casino;
+package casino.casino;
 
 import casino.chip.Chip;
+import casino.customer.Customer;
 
 public class Dealer {
     private final Casino casino;
@@ -23,6 +24,6 @@ public class Dealer {
         }
 
         casino.plusAmount(chipPrice);
-        return casino.getChip();
+        return casino.addChips();
     }
 }

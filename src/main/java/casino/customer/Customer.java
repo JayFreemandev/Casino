@@ -1,4 +1,4 @@
-package casino;
+package casino.customer;
 
 import casino.chip.Chip;
 import casino.chip.ChipCalculator;

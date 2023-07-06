@@ -6,6 +6,9 @@ import java.util.Map;
 public class ChipCalculatorMapFactory {
     private static final Map<ChipColor, ChipCalculator> calculatorMap = new HashMap<>();
 
+    private ChipCalculatorMapFactory() {
+    }
+
     static {
         calculatorMap.put(ChipColor.RED, new RedChipCalculator());
         calculatorMap.put(ChipColor.BLACK, new BlackChipCalculator());

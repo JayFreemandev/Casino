@@ -1,4 +1,4 @@
-package casino;
+package casino.casino;
 
 import casino.chip.Chip;
 
@@ -15,7 +15,7 @@ public class Casino {
         this.chips.addAll(Arrays.asList(chips));
     }
 
-    public Chip getChip() {
+    public Chip addChips() {
         return chips.remove(0);
     }
 
