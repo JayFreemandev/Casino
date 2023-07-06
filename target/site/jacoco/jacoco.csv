@@ -1,0 +1,20 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Casino,casino.customer,Customer,25,0,2,0,8,0,4,0,3,0
+Casino,casino.customer,CustomerBelonging,61,0,4,0,14,0,9,0,7,0
+Casino,casino.chip,ChipColor2,88,0,0,0,12,0,8,0,8,0
+Casino,casino.chip,RedChipCalculator,11,0,0,0,3,0,2,0,2,0
+Casino,casino.chip,Chip,41,0,6,0,13,0,7,0,4,0
+Casino,casino.chip,BlackChipCalculator,11,0,0,0,3,0,2,0,2,0
+Casino,casino.chip,GoldChipCalculator,11,0,0,0,3,0,2,0,2,0
+Casino,casino.chip,ChipCalculatorFactory,33,0,6,0,7,0,4,0,1,0
+Casino,casino.chip,ChipColor,49,0,0,0,8,0,3,0,3,0
+Casino,casino.chip,ChipCalculatorMapFactory,47,0,2,0,9,0,3,0,2,0
+Casino,casino.chip,ChipColor.new ChipColor() {...},14,0,0,0,3,0,2,0,2,0
+Casino,casino.chip,ChipColor.new ChipColor() {...},14,0,0,0,3,0,2,0,2,0
+Casino,casino.chip,ChipColor.new ChipColor() {...},14,0,0,0,3,0,2,0,2,0
+Casino,casino.casino,Dealer,37,0,2,0,10,0,4,0,3,0
+Casino,casino.casino,Casino,51,0,0,0,10,0,4,0,4,0
+Casino,transaction,BankStatementCSVParser,23,31,2,0,5,6,2,3,1,3
+Casino,transaction,BankTransaction,83,21,12,0,6,8,9,4,3,4
+Casino,transaction,BankAnalyzer,78,0,0,0,12,0,3,0,3,0
+Casino,transaction,BankStatementProcessor,79,0,10,0,20,0,9,0,4,0

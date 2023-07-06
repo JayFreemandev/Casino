@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerBelonging.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino.customer</a> &gt; <span class="el_source">CustomerBelonging.java</span></div><h1>CustomerBelonging.java</h1><pre class="source lang-java linenums">package casino.customer;
+
+import casino.chip.Chip;
+
+public class CustomerBelonging {
+    private Long amount;
+    private Chip chip;
+
+    public CustomerBelonging(long amount) {
+<span class="nc" id="L10">        this(null, amount);</span>
+<span class="nc" id="L11">    }</span>
+
+<span class="nc" id="L13">    public CustomerBelonging(Chip chip, long amount) {</span>
+<span class="nc" id="L14">        this.amount = amount;</span>
+<span class="nc" id="L15">        this.chip = chip;</span>
+<span class="nc" id="L16">    }</span>
+
+    public boolean hasMoney() {
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        return amount != null;</span>
+    }
+
+    public boolean hasChip() {
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        return chip != null;</span>
+    }
+
+    public void setChip(Chip chip) {
+<span class="nc" id="L27">        this.chip = chip;</span>
+<span class="nc" id="L28">    }</span>
+
+    public void minusAmount(Long amount) {
+<span class="nc" id="L31">        this.amount -= amount;</span>
+<span class="nc" id="L32">    }</span>
+
+    public void plusAmount(Long amount) {
+<span class="nc" id="L35">        this.amount += amount;</span>
+<span class="nc" id="L36">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

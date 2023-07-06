@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChipColor2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino.chip</a> &gt; <span class="el_source">ChipColor2.java</span></div><h1>ChipColor2.java</h1><pre class="source lang-java linenums">package casino.chip;
+
+import java.util.Arrays;
+import java.util.function.Function;
+
+<span class="nc" id="L6">public enum ChipColor2 {</span>
+<span class="nc" id="L7">    RED(chip -&gt; chip.getFee() * 5),</span>
+<span class="nc" id="L8">    BLACK(chip -&gt; chip.getFee() * 10),</span>
+<span class="nc" id="L9">    GOLD(chip -&gt; chip.getFee() * 100);</span>
+
+    private final Function&lt;Chip, Long&gt; feeCalculator;
+
+<span class="nc" id="L13">    ChipColor2(Function&lt;Chip, Long&gt; feeCalculator) {</span>
+<span class="nc" id="L14">        this.feeCalculator = feeCalculator;</span>
+<span class="nc" id="L15">    }</span>
+
+    public long calculateChipFee(Chip chip) {
+<span class="nc" id="L18">        return feeCalculator.apply(chip);</span>
+    }
+
+    public static ChipColor getColor(String color) {
+<span class="nc" id="L22">        return Arrays.stream(ChipColor.values())</span>
+<span class="nc" id="L23">                .filter(chipColor -&gt; chipColor.name().equalsIgnoreCase(color))</span>
+<span class="nc" id="L24">                .findFirst()</span>
+<span class="nc" id="L25">                .orElse(null);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankAnalyzer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">transaction</a> &gt; <span class="el_source">BankAnalyzer.java</span></div><h1>BankAnalyzer.java</h1><pre class="source lang-java linenums">package transaction;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+import static java.time.Month.FEBRUARY;
+import static java.time.Month.JANUARY;
+
+<span class="nc" id="L12">public class BankAnalyzer {</span>
+    private static final String RESOURCES = &quot;src/main/resources/&quot;;
+
+    public void analyze(final String fileName, final BankStatementParser bankStatementParser) throws IOException {
+<span class="nc" id="L16">        final Path path = Paths.get(RESOURCES + fileName);</span>
+<span class="nc" id="L17">        final List&lt;String&gt; lines = Files.readAllLines(path);</span>
+<span class="nc" id="L18">        final List&lt;BankTransaction&gt; bankTransactions = bankStatementParser.parseLinesFrom(lines);</span>
+<span class="nc" id="L19">        final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);</span>
+<span class="nc" id="L20">        collectSummary(bankStatementProcessor);</span>
+<span class="nc" id="L21">    }</span>
+
+    private static void collectSummary(BankStatementProcessor bankStatementProcessor) {
+<span class="nc" id="L24">        System.out.println(&quot;정팔이의 총 지출은  &quot; + bankStatementProcessor.calculateTotalAmount());</span>
+<span class="nc" id="L25">        System.out.println(&quot;정팔이의 1월 지출은 &quot; + bankStatementProcessor.calculateTotalInMonth(JANUARY));</span>
+<span class="nc" id="L26">        System.out.println(&quot;정팔이의 2월 지출은 &quot; + bankStatementProcessor.calculateTotalInMonth(FEBRUARY));</span>
+<span class="nc" id="L27">        System.out.println(&quot;정팔이의 총 급여는 &quot; + bankStatementProcessor.calculateTotalForCategory(&quot;Salary&quot;));</span>
+<span class="nc" id="L28">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
