@@ -2,9 +2,8 @@ package transaction;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
-
-import static java.util.stream.Collectors.toList;
 
 public class BankStatementCSVParser implements BankStatementParser {
     // 05-04-2023
@@ -18,6 +17,10 @@ public class BankStatementCSVParser implements BankStatementParser {
     }
 
     public List<BankTransaction> parseLinesFrom(final List<String> lines) {
-        return lines.stream().map(this::parseFrom).collect(toList());
+        final List<BankTransaction> bankTransactions = new ArrayList<>();
+        for (String line : lines) {
+            bankTransactions.add(parseFrom(line));
+        }
+        return bankTransactions;
     }
 }
