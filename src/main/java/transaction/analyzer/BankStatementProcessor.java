@@ -1,4 +1,6 @@
-package transaction;
+package transaction.analyzer;
+
+import transaction.domain.BankTransaction;
 
 import java.time.Month;
 import java.util.List;

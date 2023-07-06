@@ -1,4 +1,6 @@
-package transaction;
+package transaction.parser;
+
+import transaction.domain.BankTransaction;
 
 import java.util.List;
 

@@ -1,4 +1,7 @@
-package transaction;
+package transaction.analyzer;
+
+import transaction.parser.BankStatementParser;
+import transaction.domain.BankTransaction;
 
 import java.io.IOException;
 import java.nio.file.Files;
