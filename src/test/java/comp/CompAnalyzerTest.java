@@ -1,10 +1,10 @@
-package transaction;
+package comp;
 
+import comp.analyzer.CompAnalyzer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import transaction.analyzer.BankAnalyzer;
-import transaction.parser.BankStatementParser;
+import comp.parser.CompStatementParser;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,15 +15,15 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-@DisplayName("BankAnalyzer 테스트")
-public class BankAnalyzerTest {
-    private BankAnalyzer bankAnalyzer;
-    private BankStatementParser bankStatementParser;
+@DisplayName("CompAnalyzer 테스트")
+public class CompAnalyzerTest {
+    private CompAnalyzer compAnalyzer;
+    private CompStatementParser compStatementParser;
 
     @BeforeEach
     public void setUp() {
-        bankAnalyzer = new BankAnalyzer();
-        bankStatementParser = mock(BankStatementParser.class);
+        //compAnalyzer = new compAnalyzer();
+        compStatementParser = mock(CompStatementParser.class);
     }
 
     @Test
@@ -35,9 +35,9 @@ public class BankAnalyzerTest {
         List<String> lines = Files.readAllLines(path);
 
         // when
-        bankAnalyzer.analyze(fileName, bankStatementParser);
+        compAnalyzer.analyze(fileName, compStatementParser);
 
         // then
-        verify(bankStatementParser).parseLinesFrom(lines);
+        verify(compStatementParser).parseLinesFrom(lines);
     }
 }

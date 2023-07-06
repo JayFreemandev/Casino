@@ -1,24 +1,24 @@
-package transaction;
+package comp;
 
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import transaction.csv.BankStatementCSVParser;
-import transaction.domain.BankTransaction;
-import transaction.parser.BankStatementParser;
+import comp.csv.CompStatementCSVParser;
+import comp.domain.CompTransaction;
+import comp.parser.CompStatementParser;
 
 import java.time.LocalDate;
 import java.time.Month;
 
 import static org.junit.Assert.*;
 
-@DisplayName("BankStatementCSVParser 테스트")
-public class BankStatementCSVParserTest {
-    private BankStatementParser parser;
+@DisplayName("CompStatementParser 테스트")
+public class CompStatementCSVParserTest {
+    private CompStatementParser parser;
 
     @BeforeEach
     void setUp() {
-        parser = new BankStatementCSVParser();
+        parser = new CompStatementCSVParser();
     }
 
     @Test
@@ -28,8 +28,8 @@ public class BankStatementCSVParserTest {
         String line = "03-05-2023,-22000,마라탕";
 
         // when
-        parser = new BankStatementCSVParser();
-        BankTransaction bankTransaction = parser.parseFrom(line);
+        parser = new CompStatementCSVParser();
+        CompTransaction bankTransaction = parser.parseFrom(line);
 
         // then
         LocalDate expectedDate = LocalDate.of(2023, Month.MAY, 3);

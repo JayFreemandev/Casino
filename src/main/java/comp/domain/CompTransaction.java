@@ -1,14 +1,14 @@
-package transaction.domain;
+package comp.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class BankTransaction {
+public class CompTransaction {
     private final LocalDate date;
     private final double amount;
     private final String description;
 
-    public BankTransaction(
+    public CompTransaction(
             final LocalDate date,
             final double amount,
             final String description) {
@@ -31,7 +31,7 @@ public class BankTransaction {
 
     @Override
     public String toString() {
-        return "입출금 내역{" +
+        return "콤푸 기록{" +
                 "날짜=" + date +
                 ", 금액=" + amount +
                 ", 설명='" + description + '\'' +
@@ -42,7 +42,7 @@ public class BankTransaction {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BankTransaction that = (BankTransaction) o;
+        CompTransaction that = (CompTransaction) o;
         return Double.compare(that.amount, amount) == 0 && date.equals(that.date) && description.equals(that.description);
     }
 

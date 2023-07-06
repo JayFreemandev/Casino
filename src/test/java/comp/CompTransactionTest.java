@@ -1,8 +1,8 @@
-package transaction;
+package comp;
 
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import transaction.domain.BankTransaction;
+import comp.domain.CompTransaction;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -10,17 +10,17 @@ import java.time.Month;
 import static org.junit.Assert.assertEquals;
 
 
-@DisplayName("BankTransaction 클래스 테스트")
-public class BankTransactionTest {
+@DisplayName("CompTransaction 클래스 테스트")
+public class CompTransactionTest {
 
     @Test
-    @DisplayName("BankTransaction 객체의 Getter 테스트")
+    @DisplayName("CompTransaction 객체의 Getter 테스트")
     public void gettersReturnCorrectValues() {
         // given
         LocalDate date = LocalDate.of(2023, Month.MAY, 3);
         double amount = -22000;
         String description = "마라탕";
-        BankTransaction transaction = new BankTransaction(date, amount, description);
+        CompTransaction transaction = new CompTransaction(date, amount, description);
 
         // when
         LocalDate actualDate = transaction.getDate();
