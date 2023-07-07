@@ -8,13 +8,18 @@ public class CompTransaction {
     private final double amount;
     private final String description;
 
-    public CompTransaction(
-            final LocalDate date,
-            final double amount,
-            final String description) {
+    public CompTransaction(final LocalDate date, final double amount, final String description) {
         this.date = date;
         this.amount = amount;
         this.description = description;
+    }
+
+    public CompTransaction(LocalDate date, double amount) {
+        this(date, amount, "");
+    }
+
+    public CompTransaction() {
+        this(LocalDate.now(), 0, "");
     }
 
     public LocalDate getDate() {
