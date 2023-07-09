@@ -1,16 +1,17 @@
 package comp;
 
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import comp.csv.CompStatementCSVParser;
 import comp.domain.CompTransaction;
 import comp.parser.CompStatementParser;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.Month;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @DisplayName("CompStatementParser 테스트")
 public class CompStatementCSVParserTest {
@@ -36,8 +37,8 @@ public class CompStatementCSVParserTest {
         double expectedAmount = -22000;
         String expectedDescription = "마라탕";
 
-        assertEquals("날짜가 일치하지 않습니다.", expectedDate, bankTransaction.getDate());
-        assertEquals("금액이 일치하지 않습니다.", expectedAmount, bankTransaction.getAmount(), 000.1);
+        assertEquals("날짜가 일치하지 않습니다.", expectedDate, String.valueOf(bankTransaction.getDate()));
+        assertEquals("금액이 일치하지 않습니다.", expectedAmount);
         assertEquals("설명이 일치하지 않습니다.", expectedDescription, bankTransaction.getDescription());
     }
 }

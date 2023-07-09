@@ -1,13 +1,13 @@
 package comp;
 
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import comp.domain.CompTransaction;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.Month;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @DisplayName("CompTransaction 클래스 테스트")
