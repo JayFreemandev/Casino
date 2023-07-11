@@ -26,7 +26,7 @@ public class ReservationServiceImpl implements ReservationService {
 
     private boolean isReservationOverlapping(Reservation newReservation) {
         for (Reservation existingReservation : reservations) {
-            if (existingReservation.isAleadyBooked(newReservation)) {
+            if (existingReservation.isAlreadyBooked(newReservation)) {
                 return true;
             }
         }

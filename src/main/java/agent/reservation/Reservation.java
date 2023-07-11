@@ -34,7 +34,7 @@ public class Reservation {
         return checkOutDate;
     }
 
-    public boolean isAleadyBooked(Reservation otherReservation) {
+    public boolean isAlreadyBooked(Reservation otherReservation) {
         return !checkOutDate.isBefore(otherReservation.getCheckInDate()) &&
                 !checkInDate.isAfter(otherReservation.getCheckOutDate());
     }
