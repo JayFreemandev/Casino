@@ -10,8 +10,7 @@ public class Agent {
     private final ExchangeService exchangeService;
     private final MealPreparationService mealPreparationService;
 
-    public Agent(String agentName, ReservationService reservationService, ExchangeService exchangeService,
-                 MealPreparationService mealPreparationService) {
+    public Agent(String agentName, ReservationService reservationService, ExchangeService exchangeService, MealPreparationService mealPreparationService) {
         this.agentName = agentName;
         this.reservationService = reservationService;
         this.exchangeService = exchangeService;

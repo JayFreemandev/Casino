@@ -16,8 +16,6 @@ public class AgentGroup {
     }
 
     public Optional<Agent> findAgentByName(final String name) {
-        return agents.stream()
-                .filter(agent -> agent.getAgentName().equals(name))
-                .findFirst();
+        return agents.stream().filter(agent -> agent.getAgentName().equals(name)).findFirst();
     }
 }

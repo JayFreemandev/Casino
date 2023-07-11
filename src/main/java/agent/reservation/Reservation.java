@@ -17,15 +17,6 @@ public class Reservation {
         this.checkOutDate = checkOutDate;
     }
 
-
-    public Client getClient() {
-        return client;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
     public LocalDate getCheckInDate() {
         return checkInDate;
     }

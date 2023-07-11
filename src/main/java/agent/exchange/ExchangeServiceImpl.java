@@ -27,6 +27,6 @@ public class ExchangeServiceImpl implements ExchangeService {
         return exchangeRates.stream()
                 .filter(rate -> rate.hasCurrencyPair(sourceCurrency, targetCurrency))
                 .findFirst()
-                .orElseThrow(() ->  new AgentException(AgentExceptionType.CONVERSION_FAILED));
+                .orElseThrow(() -> new AgentException(AgentExceptionType.CONVERSION_FAILED));
     }
 }
