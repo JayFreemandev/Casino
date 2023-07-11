@@ -1,5 +1,8 @@
 package agent.reservation;
 
+import agent.exception.AgentException;
+import agent.exception.AgentExceptionType;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +16,7 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public Optional<Reservation> makeReservation(Reservation reservation) {
         if (isReservationOverlapping(reservation)) {
-            return Optional.empty();
+            throw new AgentException(AgentExceptionType.INVALID_CUSTOMER);
         }
         reservations.add(reservation);
         return Optional.of(reservation);

@@ -1,5 +1,8 @@
 package agent.exchange;
 
+import agent.exception.AgentException;
+import agent.exception.AgentExceptionType;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +27,6 @@ public class ExchangeServiceImpl implements ExchangeService {
         return exchangeRates.stream()
                 .filter(rate -> rate.hasCurrencyPair(sourceCurrency, targetCurrency))
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(() ->  new AgentException(AgentExceptionType.CONVERSION_FAILED));
     }
 }

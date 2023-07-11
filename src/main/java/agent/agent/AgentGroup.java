@@ -20,5 +20,4 @@ public class AgentGroup {
                 .filter(agent -> agent.getAgentName().equals(name))
                 .findFirst();
     }
-
 }

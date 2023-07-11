@@ -1,5 +1,8 @@
 package agent.meal;
 
+import agent.exception.AgentException;
+import agent.exception.AgentExceptionType;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +20,7 @@ public class MealPreparationServiceImpl implements MealPreparationService {
         Meal chickenMeal = availableMeals.stream()
                 .filter(meal -> meal.getName().equalsIgnoreCase(MealType.BREAKFAST.name()))
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("죄송합니다 치킨을 준비 못했습니다.."));
+                .orElseThrow(() -> new AgentException(AgentExceptionType.MEAL_PREPARATION_FAILED));
 
         List<String> newIngredients = new ArrayList<>(chickenMeal.getIngredients());
         newIngredients.addAll(ingredients);
