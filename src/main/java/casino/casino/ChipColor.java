@@ -1,16 +1,18 @@
-package casino.chip;
+package casino.casino;
+
+import casino.global.CasinoConstant;
 
 import java.util.Arrays;
 import java.util.function.Function;
 
-public enum ChipColor2 {
-    RED(chip -> chip.getFee() * 5),
-    BLACK(chip -> chip.getFee() * 10),
-    GOLD(chip -> chip.getFee() * 100);
+public enum ChipColor {
+    RED(chip -> chip.getFee() * CasinoConstant.RED_CHIP_MULTIPLIER),
+    BLACK(chip -> chip.getFee() * CasinoConstant.BLACK_CHIP_MULTIPLIER),
+    GOLD(chip -> chip.getFee() * CasinoConstant.GOLD_CHIP_MULTIPLIER);
 
     private final Function<Chip, Long> feeCalculator;
 
-    ChipColor2(Function<Chip, Long> feeCalculator) {
+    ChipColor(Function<Chip, Long> feeCalculator) {
         this.feeCalculator = feeCalculator;
     }
 

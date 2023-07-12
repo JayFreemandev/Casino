@@ -1,6 +1,6 @@
 package comp.analyzer;
 
-import comp.domain.CompTransaction;
+import comp.comp.CompTransaction;
 import comp.parser.CompStatementParser;
 
 import java.io.IOException;

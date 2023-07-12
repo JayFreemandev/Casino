@@ -6,5 +6,5 @@ public class AgentConstant {
     public static final String CURRENCY = "currency";
 
     /* 번들 모듈 */
-    public static final String EXCEPTION_MESSAGE_BUNDLE = "AgentExceptionMessages";
+    public static final String EXCEPTION_MESSAGE_BUNDLE = "CasinoxceptionMessages";
 }

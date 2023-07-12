@@ -1,15 +1,15 @@
-package comp.csv;
+package comp.parser;
 
 import comp.parser.CompStatementParser;
-import comp.domain.CompTransaction;
+import comp.comp.CompTransaction;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CompStatementCSVParser implements CompStatementParser {
-    // 05-04-2023
     private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     public CompStatementCSVParser() {
@@ -23,10 +23,8 @@ public class CompStatementCSVParser implements CompStatementParser {
     }
 
     public List<CompTransaction> parseLinesFrom(final List<String> lines) {
-        final List<CompTransaction> compTransactions = new ArrayList<>();
-        for (String line : lines) {
-            compTransactions.add(parseFrom(line));
-        }
-        return compTransactions;
+        return lines.stream()
+                .map(this::parseFrom)
+                .collect(Collectors.toList());
     }
 }

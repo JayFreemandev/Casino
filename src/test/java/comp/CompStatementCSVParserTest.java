@@ -2,8 +2,8 @@ package comp;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import comp.csv.CompStatementCSVParser;
-import comp.domain.CompTransaction;
+import comp.parser.CompStatementCSVParser;
+import comp.comp.CompTransaction;
 import comp.parser.CompStatementParser;
 import org.junit.jupiter.api.Test;
 

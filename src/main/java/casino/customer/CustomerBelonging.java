@@ -1,6 +1,6 @@
 package casino.customer;
 
-import casino.chip.Chip;
+import casino.casino.Chip;
 
 public class CustomerBelonging {
     private Long amount;

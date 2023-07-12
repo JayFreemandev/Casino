@@ -4,7 +4,7 @@ package comp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import comp.analyzer.CompStatementProcessor;
-import comp.domain.CompTransaction;
+import comp.comp.CompTransaction;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

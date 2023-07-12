@@ -1,7 +1,7 @@
 package comp;
 
 import org.junit.jupiter.api.DisplayName;
-import comp.domain.CompTransaction;
+import comp.comp.CompTransaction;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

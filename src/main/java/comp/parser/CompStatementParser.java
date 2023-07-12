@@ -1,6 +1,6 @@
 package comp.parser;
 
-import comp.domain.CompTransaction;
+import comp.comp.CompTransaction;
 
 import java.util.List;
 

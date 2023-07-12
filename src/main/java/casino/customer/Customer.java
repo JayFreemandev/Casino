@@ -1,8 +1,8 @@
 package casino.customer;
 
-import casino.chip.Chip;
-import casino.chip.ChipCalculator;
-import casino.chip.ChipCalculatorFactory;
+import casino.calculator.ChipCalculatorFactory;
+import casino.casino.Chip;
+import casino.calculator.ChipCalculator;
 
 public class Customer {
     private final CustomerBelonging customerBelonging;
@@ -20,7 +20,7 @@ public class Customer {
             ChipCalculator chipCalculator = ChipCalculatorFactory.createChipCalculator(chip.getChipColor());
             return chipCalculator.calculateChipFee(chip);
         } else {
-            return 0L;
+            throw new IllegalStateException();
         }
     }
 }

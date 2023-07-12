@@ -1,6 +1,5 @@
 package casino.casino;
 
-import casino.chip.Chip;
 import casino.customer.Customer;
 
 public class Dealer {
@@ -20,7 +19,7 @@ public class Dealer {
     public Chip changeChip(Customer customer) {
         Long chipPrice = customer.buyChipFactoryVersion(chip);
         if (chipPrice > chip.getFee()) {
-            return new Chip();
+            throw new IllegalArgumentException();
         }
 
         casino.plusAmount(chipPrice);
