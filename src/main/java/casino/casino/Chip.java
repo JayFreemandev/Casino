@@ -14,6 +14,11 @@ public class Chip {
         this.chipColor = chipColor;
     }
 
+    public Chip(ChipColor chipColor, Long fee) {
+        this.chipColor = chipColor;
+        this.fee = fee;
+    }
+
     public Long getFee() {
         return fee;
     }

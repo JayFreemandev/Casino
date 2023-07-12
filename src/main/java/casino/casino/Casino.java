@@ -24,4 +24,8 @@ public class Casino {
     public void plusAmount(Long amount) {
         this.amount += amount;
     }
+
+    public Long getAvailableAmount() {
+        return amount;
+    }
 }

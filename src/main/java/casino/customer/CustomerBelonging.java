@@ -27,6 +27,10 @@ public class CustomerBelonging {
         this.chip = chip;
     }
 
+    public Chip getChip() {
+        return chip;
+    }
+
     public void minusAmount(Long amount) {
         this.amount -= amount;
     }
