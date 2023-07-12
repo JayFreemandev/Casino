@@ -6,10 +6,15 @@ import casino.global.CasinoExceptionConstant;
 import java.util.HashMap;
 import java.util.Map;
 
+import static casino.global.CasinoExceptionConstant.UTILITY_CLASS_CREATE_EXCEPTION_MESSAGE;
+
+
 public class ChipCalculatorFactory {
+
     private static final Map<ChipColor, ChipCalculator> calculatorMap = new HashMap<>();
 
     private ChipCalculatorFactory() {
+        throw new IllegalStateException(UTILITY_CLASS_CREATE_EXCEPTION_MESSAGE);
     }
 
     static {
