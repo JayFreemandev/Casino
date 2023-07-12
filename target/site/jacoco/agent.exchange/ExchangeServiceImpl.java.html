@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExchangeServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">agent.exchange</a> &gt; <span class="el_source">ExchangeServiceImpl.java</span></div><h1>ExchangeServiceImpl.java</h1><pre class="source lang-java linenums">package agent.exchange;
+
+import agent.exception.AgentException;
+import agent.exception.AgentExceptionType;
+
+import java.util.List;
+import java.util.Optional;
+
+public class ExchangeServiceImpl implements ExchangeService {
+    private final List&lt;ExchangeRate&gt; exchangeRates;
+
+<span class="nc" id="L12">    public ExchangeServiceImpl(List&lt;ExchangeRate&gt; exchangeRates) {</span>
+<span class="nc" id="L13">        this.exchangeRates = exchangeRates;</span>
+<span class="nc" id="L14">    }</span>
+
+    @Override
+    public Optional&lt;Double&gt; convertCurrency(double amount, Currency sourceCurrency, Currency targetCurrency) {
+<span class="nc" id="L18">        ExchangeRate exchangeRate = findExchangeRate(sourceCurrency, targetCurrency);</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        if (exchangeRate != null) {</span>
+<span class="nc" id="L20">            double convertedAmount = exchangeRate.convertCurrency(amount);</span>
+<span class="nc" id="L21">            return Optional.of(convertedAmount);</span>
+        }
+<span class="nc" id="L23">        return Optional.empty();</span>
+    }
+
+    private ExchangeRate findExchangeRate(Currency sourceCurrency, Currency targetCurrency) {
+<span class="nc" id="L27">        return exchangeRates.stream()</span>
+<span class="nc" id="L28">                .filter(rate -&gt; rate.hasCurrencyPair(sourceCurrency, targetCurrency))</span>
+<span class="nc" id="L29">                .findFirst()</span>
+<span class="nc" id="L30">                .orElseThrow(() -&gt; new AgentException(AgentExceptionType.CONVERSION_FAILED));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

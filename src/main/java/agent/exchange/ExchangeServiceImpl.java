@@ -9,7 +9,7 @@ import java.util.Optional;
 public class ExchangeServiceImpl implements ExchangeService {
     private final List<ExchangeRate> exchangeRates;
 
-    private ExchangeServiceImpl(List<ExchangeRate> exchangeRates) {
+    public ExchangeServiceImpl(List<ExchangeRate> exchangeRates) {
         this.exchangeRates = exchangeRates;
     }
 

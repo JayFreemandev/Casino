@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Dealer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">casino.casino</a> &gt; <span class="el_source">Dealer.java</span></div><h1>Dealer.java</h1><pre class="source lang-java linenums">package casino.casino;
 
-import casino.chip.Chip;
 import casino.customer.Customer;
 
 public class Dealer {
@@ -8,23 +7,23 @@ public class Dealer {
 
     private final Chip chip;
 
-<span class="nc" id="L11">    public Dealer(Casino casino, Chip chip) {</span>
-<span class="nc" id="L12">        this.casino = casino;</span>
-<span class="nc" id="L13">        this.chip = chip;</span>
-<span class="nc" id="L14">    }</span>
+<span class="nc" id="L10">    public Dealer(Casino casino, Chip chip) {</span>
+<span class="nc" id="L11">        this.casino = casino;</span>
+<span class="nc" id="L12">        this.chip = chip;</span>
+<span class="nc" id="L13">    }</span>
 
     public Casino getCasino() {
-<span class="nc" id="L17">        return casino;</span>
+<span class="nc" id="L16">        return casino;</span>
     }
 
     public Chip changeChip(Customer customer) {
-<span class="nc" id="L21">        Long chipPrice = customer.buyChipFactoryVersion(chip);</span>
-<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (chipPrice &gt; chip.getFee()) {</span>
-<span class="nc" id="L23">            return new Chip();</span>
+<span class="nc" id="L20">        Long chipPrice = customer.buyChipFactoryVersion(chip);</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        if (chipPrice &gt; chip.getFee()) {</span>
+<span class="nc" id="L22">            throw new IllegalArgumentException();</span>
         }
 
-<span class="nc" id="L26">        casino.plusAmount(chipPrice);</span>
-<span class="nc" id="L27">        return casino.addChips();</span>
+<span class="nc" id="L25">        casino.plusAmount(chipPrice);</span>
+<span class="nc" id="L26">        return casino.addChips();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

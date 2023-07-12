@@ -8,7 +8,6 @@ public enum Currency {
     private final String code;
     private final String symbol;
 
-
     Currency(String code, String symbol) {
         this.code = code;
         this.symbol = symbol;

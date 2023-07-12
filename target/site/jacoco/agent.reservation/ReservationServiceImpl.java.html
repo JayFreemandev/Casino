@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReservationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Casino</a> &gt; <a href="index.source.html" class="el_package">agent.reservation</a> &gt; <span class="el_source">ReservationServiceImpl.java</span></div><h1>ReservationServiceImpl.java</h1><pre class="source lang-java linenums">package agent.reservation;
+
+import agent.exception.AgentException;
+import agent.exception.AgentExceptionType;
+
+import java.util.List;
+import java.util.Optional;
+
+public class ReservationServiceImpl implements ReservationService {
+    private final List&lt;Reservation&gt; reservations;
+
+<span class="nc" id="L12">    public ReservationServiceImpl(List&lt;Reservation&gt; reservations) {</span>
+<span class="nc" id="L13">        this.reservations = reservations;</span>
+<span class="nc" id="L14">    }</span>
+
+    @Override
+    public Optional&lt;Reservation&gt; makeReservation(Reservation reservation) {
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        if (isReservationOverlapping(reservation)) {</span>
+<span class="nc" id="L19">            throw new AgentException(AgentExceptionType.INVALID_CUSTOMER);</span>
+        }
+<span class="nc" id="L21">        reservations.add(reservation);</span>
+<span class="nc" id="L22">        return Optional.of(reservation);</span>
+    }
+
+    @Override
+    public boolean cancelReservation(Reservation reservation) {
+<span class="nc" id="L27">        return reservations.remove(reservation);</span>
+    }
+
+    private boolean isReservationOverlapping(Reservation newReservation) {
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        for (Reservation existingReservation : reservations) {</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            if (existingReservation.isAlreadyBooked(newReservation)) {</span>
+<span class="nc" id="L33">                return true;</span>
+            }
+<span class="nc" id="L35">        }</span>
+<span class="nc" id="L36">        return false;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

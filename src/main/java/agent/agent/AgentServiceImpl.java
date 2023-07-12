@@ -14,7 +14,6 @@ public class AgentServiceImpl implements AgentService {
     public Optional<Agent> findAgentByName(String name) {
         return agentGroup.findAgentByName(name);
     }
-
     @Override
     public List<Agent> getAllAgents() {
         return agentGroup.getAllAgents();
