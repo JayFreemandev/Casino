@@ -36,27 +36,27 @@ NPE를 해결하기 위해 Optional을 활용하여 신뢰성 있는 코드를 �
 - 테스트 주도 개발로 신뢰성 있는 환경
 <hr>
 
-### 기술적고민  
-- 변경에 취약하고 객체의 책임을 분리해야하는 상황
-- 반복되는 if문을 처리하는 다양한 방법
-- 객체 지향에서 getter과 setter를 지향하는 이유
-- 보다 효율적이고 보기좋은 패키지 구조에 대한 고민
-- 정적 팩토리 메소드가 필요한 순간과 사용시 기본 생성자 private 이유
+### [기술적고민](https://github.com/JayFreemandev/Casino/wiki)  
+- [변경에 취약하고 객체의 책임을 분리해야하는 상황](https://github.com/JayFreemandev/Casino/wiki/%EB%B3%80%EA%B2%BD%EC%97%90-%EC%B7%A8%EC%95%BD%ED%95%98%EA%B3%A0-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EC%B1%85%EC%9E%84%EC%9D%84-%EB%B6%84%EB%A6%AC%ED%95%B4%EC%95%BC%ED%95%98%EB%8A%94-%EC%83%81%ED%99%A9)
+- [반복되는 if문을 처리하는 다양한 방법](https://github.com/JayFreemandev/Casino/wiki/%EB%B0%98%EB%B3%B5%EB%90%98%EB%8A%94-if%EB%AC%B8%EC%9D%84-%ED%94%BC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+- [객체 지향에서 getter과 setter를 지향하는 이유](https://github.com/JayFreemandev/Casino/wiki/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%97%90%EC%84%9C-getter%EC%99%80-setter%EB%A5%BC-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
+- [보다 효율적이고 보기좋은 패키지 구조에 대한 고민](https://github.com/JayFreemandev/Casino/wiki/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B4%EA%B3%A0-%EB%B3%B4%EA%B8%B0%EC%A2%8B%EC%9D%80-%ED%8C%A8%ED%82%A4%EC%A7%80-%EA%B5%AC%EC%A1%B0%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%AF%BC)
+- [정적 팩토리 메소드가 필요한 순간과 사용시 기본 생성자 private 이유](https://github.com/JayFreemandev/Casino/wiki/%EC%A0%95%EC%A0%81-%ED%8C%A9%ED%86%A0%EB%A6%AC-%EB%A9%94%EC%86%8C%EB%93%9C%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%88%9C%EA%B0%84%EA%B3%BC-%EC%82%AC%EC%9A%A9%EC%8B%9C-%EA%B8%B0%EB%B3%B8-%EC%83%9D%EC%84%B1%EC%9E%90-private-%EC%A7%80%EC%A0%95-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
 <hr>
 
-- 좋은 테스트 코드는 무엇일까
-- 적절한 테스트 코드의 커버리지 수치는 어떻게 정할까
-- 같은 클래스내 생성자가 두개 이상인 경우 생성자 체인 기법
-- Stream 으로 리팩토링하며 고려해야할 상황
-- equals와 hashCode를 재정의 하는 이유
+- [좋은 테스트 코드는 무엇일까](https://github.com/JayFreemandev/Casino/wiki/%EC%A2%8B%EC%9D%80-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%8A%94-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C%3F)
+- [적절한 테스트 코드의 커버리지 수치는 어떻게 정할까](https://github.com/JayFreemandev/Casino/wiki/%EC%A0%81%EC%A0%88%ED%95%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EC%9D%98-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80-%EC%88%98%EC%B9%98%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%A0%95%ED%95%A0%EA%B9%8C)
+- [같은 클래스내 생성자가 두개 이상인 경우 생성자 체인 기법](https://github.com/JayFreemandev/Casino/wiki/%EA%B0%99%EC%9D%80-%ED%81%B4%EB%9E%98%EC%8A%A4%EB%82%B4-%EC%83%9D%EC%84%B1%EC%9E%90%EA%B0%80-%EB%91%90%EA%B0%9C-%EC%9D%B4%EC%83%81%EC%9D%B8-%EA%B2%BD%EC%9A%B0-%EC%83%9D%EC%84%B1%EC%9E%90-%EC%B2%B4%EC%9D%B8-%EA%B8%B0%EB%B2%95)
+- [Stream 으로 리팩토링하며 고려해야할 상황](https://github.com/JayFreemandev/Casino/wiki/Stream-%EC%9C%BC%EB%A1%9C-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81%ED%95%98%EB%A9%B0-%EA%B3%A0%EB%A0%A4%ED%95%B4%EC%95%BC%ED%95%A0-%EC%83%81%ED%99%A9)
+- [equals와 hashCode를 재정의 하는 이유](https://github.com/JayFreemandev/Casino/wiki/equals%EC%99%80-hashCode%EB%A5%BC-%EA%B0%99%EC%9D%B4-%EC%9E%AC%EC%A0%95%EC%9D%98-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
 <hr>
 
-- NPE를 방지하기 위한 optional 상황
-- 불변 객체 사용과 일급 컬렉션을 사용하는 이유는 무엇일까
-- static을 사용하여 utlity를 만드는건 나쁘게 봐야할까
-- 자주 사용되는 상수들을 글로벌하게 관리하는것은 어떨까?
-- 방어적 복사시 UnmodifiableList가 불변을 보장해주지는 않았다
-- 이상적인 예외 처리에 대한 고민
+- [NPE를 방지하기 위한 optional 상황](https://github.com/JayFreemandev/Casino/wiki/NPE-%EB%B0%A9%EC%A7%80%EC%9A%A9-optional-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95)
+- [불변 객체 사용과 일급 컬렉션을 사용하는 이유는 무엇일까](https://github.com/JayFreemandev/Casino/wiki/%EB%B6%88%EB%B3%80-%EA%B0%9D%EC%B2%B4%EB%A5%BC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95%EA%B3%BC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%9D%B4%EC%9C%A0(feat.-%EC%9D%BC%EA%B8%89-%EC%BB%AC%EB%A0%89%EC%85%98))
+- [static을 사용하여 utlity를 만드는건 나쁘게 봐야할까](https://github.com/JayFreemandev/Casino/wiki/static%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%9C-utility%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81)
+- [자주 사용되는 상수들을 글로벌하게 관리하는것은 어떨까?](https://github.com/JayFreemandev/Casino/wiki/%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%EB%90%98%EB%8A%94-%EC%83%81%EC%88%98%EB%93%A4%EC%9D%84-%EA%B8%80%EB%A1%9C%EB%B2%8C%ED%95%98%EA%B2%8C-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94%EA%B2%83%EC%9D%80-%EC%96%B4%EB%96%A8%EA%B9%8C%3F)
+- [방어적 복사시 UnmodifiableList가 불변을 보장해주지는 않았다](https://github.com/JayFreemandev/Casino/wiki/UnmodifiableList%EA%B0%80-%EB%B6%88%EB%B3%80%EC%9D%84-%EB%B3%B4%EC%9E%A5%ED%95%B4%EC%A3%BC%EC%A7%80%EB%8A%94-%EC%95%8A%EB%8A%94%EB%8B%A4.)
+- [이상적인 예외 처리에 대한 고민](https://github.com/JayFreemandev/Casino/wiki/%EC%9D%B4%EC%83%81%EC%A0%81%EC%9D%B8-%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B3%A0%EB%AF%BC)
 <hr>
 <details>
 <summary> reference </summary>
