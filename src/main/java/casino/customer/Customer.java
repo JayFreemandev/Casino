@@ -11,10 +11,6 @@ public class Customer {
         this.customerBelonging = customerBelonging;
     }
 
-    public CustomerBelonging getCustomerBelonging() {
-        return customerBelonging;
-    }
-
     public Long buyChipFactoryVersion(Chip chip) {
         if (customerBelonging.hasMoney()) {
             ChipCalculator chipCalculator = ChipCalculatorFactory.createChipCalculator(chip.getChipColor());

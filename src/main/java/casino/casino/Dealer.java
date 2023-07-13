@@ -12,10 +12,6 @@ public class Dealer {
         this.chip = chip;
     }
 
-    public Casino getCasino() {
-        return casino;
-    }
-
     public Chip changeChip(Customer customer) {
         Long chipPrice = customer.buyChipFactoryVersion(chip);
         if (chipPrice > chip.getFee()) {
