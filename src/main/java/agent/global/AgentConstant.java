@@ -9,10 +9,6 @@ public class AgentConstant {
         throw new IllegalStateException(UTILITY_CLASS_CREATE_EXCEPTION_MESSAGE);
     }
 
-    public static final String RESERVATION = "reservation";
-    public static final String MEAL = "meal";
-    public static final String CURRENCY = "currency";
-
     /* 번들 모듈 */
     public static final String EXCEPTION_MESSAGE_BUNDLE = "CasinoxceptionMessages";
 }

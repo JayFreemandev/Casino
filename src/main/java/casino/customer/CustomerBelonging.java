@@ -30,12 +30,4 @@ public class CustomerBelonging {
     public Chip getChip() {
         return chip;
     }
-
-    public void minusAmount(Long amount) {
-        this.amount -= amount;
-    }
-
-    public void plusAmount(Long amount) {
-        this.amount += amount;
-    }
 }

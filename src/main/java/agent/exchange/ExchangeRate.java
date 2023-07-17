@@ -8,11 +8,6 @@ public class ExchangeRate {
         this.currencyPair = currencyPair;
         this.rate = rate;
     }
-
-    public double getRate() {
-        return rate;
-    }
-
     public boolean hasCurrencyPair(Currency sourceCurrency, Currency targetCurrency) {
         return currencyPair.equals(new CurrencyPair(sourceCurrency, targetCurrency));
     }
